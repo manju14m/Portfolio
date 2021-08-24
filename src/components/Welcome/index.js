@@ -64,7 +64,7 @@ export default function Welcome() {
 
 
     const chatUrl = `https://wa.me/${process.env.REACT_APP_PHONE_NUMBER}?text=${process.env.REACT_APP_MESSAGE}`
-
+    console.log(process.env.REACT_APP_PHONE_NUMBER)
     return (
         <>
             <div id="welcome">
