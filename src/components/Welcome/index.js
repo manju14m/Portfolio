@@ -1,3 +1,5 @@
+import AOS from 'aos'
+import 'aos/dist/aos.css
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import AOS from 'aos';
@@ -58,7 +60,7 @@ export default function Welcome() {
 
     useEffect(() => {
         AOS.init({
-            duration: 1000
+            duration: 800
         });
     }, []);
 
@@ -68,10 +70,10 @@ export default function Welcome() {
     return (
         <>
             <div id="welcome">
-                <div className="profile">
+                <div className="profile" data-aos={"zoom-in"} data-aos-duration="300">
                     <img src={profile} alt="profile"/>
                 </div>
-                <div className="header">
+                <div className="header" data-aos={"zoom-in"} data-aos-duration="300">
                     <h2>Hi, I'm Manju</h2>
                     <Typed className={classes.typed}
                         strings={['Web Developer', 'React Developer', 'MERN Stack Developer']}
@@ -80,18 +82,18 @@ export default function Welcome() {
                         loop
                     />
                     <div>
-                        <a href="https://www.linkedin.com/in/manjunatha-m-b1647a109" target="_blank">
+                        <a href="https://www.linkedin.com/in/manjunatha-m-b1647a109" target="_blank" data-aos={"fade-up"} data-aos-duration="300">
                             <SiLinkedin className="linkedin"/>
                         </a>
-                        <a  href="https://github.com/manju14m" target="_blank">
+                        <a  href="https://github.com/manju14m" target="_blank" data-aos={"fade-up"} data-aos-duration="500">
                             <SiGithub className="github"/>
                         </a>
-                        <a  href="mailto:manju14m@gmail.com" target="_blank">
+                        <a  href="mailto:manju14m@gmail.com" target="_blank" data-aos={"fade-up"} data-aos-duration="700">
                             <SiGmail className="mail"/>
                         </a>
                     </div>
 
-                    <div className="seemore">
+                    <div className="seemore" data-aos={"fade-down"} data-aos-duration="500">
                     <Link to="skills">
                         <HiOutlineChevronDoubleDown/>
                     </Link>
