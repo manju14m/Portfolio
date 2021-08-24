@@ -1,38 +1,639 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome and Opera */
+  font-family: Roboto, monospace;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1ff103;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.span {
+  margin-top: 3px;
+  width: 90px;
+  height: 8px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background-color: #29f329;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(241, 207, 14, 0.5)), to(rgba(7, 51, 145, 0.5)));
+  background-image: linear-gradient(to right, rgba(241, 207, 14, 0.5), rgba(7, 51, 145, 0.5));
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #074066;
+}
+
+#navbar {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  z-index: 50;
+  background-color: #f3f8ed;
+  -webkit-box-shadow: 0 0 8px 1px;
+          box-shadow: 0 0 8px 1px;
+}
+
+#navbar ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 20px;
+  padding: 0 5px;
+}
+
+#navbar ul li {
+  padding: 0 30px;
+}
+
+#navbar ul li a {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#navbar ul li a:hover {
+  color: aqua;
+}
+
+.active {
+  border-bottom: 3px solid #5f11dd;
+  color: #1589f5;
+}
+
+#welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(41, 41, 38, 0.9)), to(rgba(110, 56, 56, 0.9))), url("assets/media/skill.jpg");
+  background-image: linear-gradient(rgba(41, 41, 38, 0.9), rgba(110, 56, 56, 0.9)), url("assets/media/skill.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.profile {
+  z-index: 20;
+}
+
+.profile img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+
+.tsparticles-canvas-el {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 5;
+  width: 50%;
+  font-size: 1.5em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header div {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header div a {
+  font-size: 1.6rem;
+  margin: 0 10px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header div .linkedin:hover {
+  color: #0a66c2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header div .github:hover {
+  color: black;
+}
+
+.header div .mail:hover {
+  color: #d04836;
+}
+
+.seemore {
+  position: absolute;
+  bottom: 100px;
+  left: 45%;
+  -webkit-animation: move 1.5s infinite linear;
+          animation: move 1.5s infinite linear;
+}
+
+@-webkit-keyframes move {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
   }
 }
+
+@keyframes move {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+  }
+}
+
+#welcome h2 {
+  color: #e2eeb4;
+  margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+  .profile img {
+    width: 250px;
+    height: 250px;
+  }
+  #welcome {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+#skills {
+  width: 100%;
+  padding: 50px;
+}
+
+#skills p {
+  color: #353030;
+  font-size: 1rem;
+}
+
+.skill {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  -webkit-box-shadow: -1px 1px 10px 4px #e6dbe1;
+          box-shadow: -1px 1px 10px 4px #e6dbe1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+  position: relative;
+}
+
+.skill img {
+  height: 50px;
+  width: 50px;
+}
+
+.skill p {
+  background-color: green;
+  color: white !important;
+  position: absolute;
+  text-align: center;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  opacity: 0;
+  top: -10px;
+}
+
+.skill:hover p {
+  opacity: 1;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.skillsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skillsContainer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+.skillsContainer :last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lottie {
+  width: 700px;
+}
+
+@media (max-width: 800px) {
+  .skill img {
+    height: 50px;
+    width: 50px;
+  }
+  .content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+#projects {
+  width: 100%;
+  background-color: #dfd9d9;
+  padding-top: 40px;
+}
+
+.contain {
+  padding: 0 5px 30px 5px;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  padding: 0 30px 30px 30px;
+  color: #0a470a;
+}
+
+.card img {
+  height: 200px;
+  width: 300px;
+  border-radius: 20px;
+}
+
+.card div {
+  padding: 20px;
+}
+
+.card div p {
+  font-size: 1rem;
+  padding: 10px 0;
+  color: #8b8686;
+}
+
+.card div p span {
+  color: #353030;
+}
+
+.card div a {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.card div a:hover {
+  color: blue;
+}
+
+.card:nth-child(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  text-align: right;
+}
+
+@media (max-width: 800px) {
+  .card {
+    display: block;
+  }
+  .card img {
+    height: 100px;
+    width: 200px;
+  }
+  .card div {
+    padding: 0;
+    margin-top: 20px;
+  }
+}
+
+.hire {
+  width: 100%;
+  height: 40vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("assets/media/hire.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/media/hire.jpg");
+  padding: 80px 0;
+  background-size: 100% 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hire h2 {
+  color: white;
+}
+
+.hire a {
+  text-decoration: none;
+  color: #4df34d;
+  font-size: 2rem;
+}
+
+.hire a:hover {
+  color: #5555f0;
+}
+
+#contact {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-clip-path: polygon(50% 60px, 100% 0, 100% 100%, 0 100%, 0 0);
+          clip-path: polygon(50% 60px, 100% 0, 100% 100%, 0 100%, 0 0);
+  background-color: #314558;
+}
+
+#contact .heading {
+  margin-top: 70px;
+  color: #a1c995;
+}
+
+.social-media {
+  margin-bottom: 10px;
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.social-media a {
+  font-size: 2rem;
+  color: white;
+}
+
+.social-media a:hover {
+  color: white;
+}
+
+.social-media .linkedin:hover {
+  color: #0a66c2;
+}
+
+.social-media .github:hover {
+  color: black;
+}
+
+.social-media .mail:hover {
+  color: #d04836;
+}
+
+.contact-form {
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 30px auto;
+  background-color: white;
+  -webkit-box-shadow: 0 0 8px 1px black;
+          box-shadow: 0 0 8px 1px black;
+}
+
+@media (max-width: 800px) {
+  .contact-form {
+    max-width: 300px;
+  }
+}
+
+.contact-form p {
+  color: rgba(5, 115, 119, 0.5);
+  margin: 5px auto;
+  font-size: 1em;
+}
+
+.form {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form p {
+  color: red;
+  font-size: 0.8em;
+}
+
+input,
+textarea {
+  width: 90%;
+  height: 10px;
+  margin-top: 30px;
+  padding: 15px;
+  font-size: 1em;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  border-bottom: 2px solid #0d2eec;
+}
+
+form button {
+  margin: 20px;
+  font-size: 1.2rem;
+  background-color: #56f356;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  -webkit-filter: opacity(0.8);
+          filter: opacity(0.8);
+}
+
+.footer {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .copyright {
+  padding: 0 3px;
+  font-size: 1.7rem;
+}
+
+@media (max-width: 800px) {
+  body {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=App.css.map */

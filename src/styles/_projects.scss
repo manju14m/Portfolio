@@ -1,0 +1,59 @@
+#projects {
+  width: 100%;
+  background-color: rgb(223, 217, 217);
+  padding-top: 40px;
+}
+.contain {
+  padding: 0 5px 30px 5px;
+}
+.card {
+  display: flex;
+  margin: 30px 0;
+  align-items: center;
+  text-align: left;
+  padding: 0 30px 30px 30px;
+  color: rgb(10, 71, 10);
+
+  img {
+    height: 200px;
+    width: 300px;
+    border-radius: 20px;
+  }
+  div {
+    padding: 20px;
+    p {
+      font-size: 1rem;
+      padding: 10px 0;
+      color: rgb(139, 134, 134);
+      span {
+        color: rgb(53, 48, 48);
+      }
+    }
+    a {
+      color: black;
+      font-size: 1.5rem;
+      &:hover {
+        color: blue;
+      }
+    }
+  }
+}
+
+.card:nth-child(even) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+@media (max-width: 800px) {
+  .card {
+    display: block;
+    img {
+      height: 100px;
+      width: 200px;
+    }
+    div {
+      padding: 0;
+      margin-top: 20px;
+    }
+  }
+}

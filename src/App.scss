@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+  font-family: Roboto, monospace;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(31, 241, 3);
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.span {
+  margin-top: 3px;
+  width: 90px;
+  height: 8px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background-color: rgb(41, 243, 41);
+  background-image: linear-gradient(
+    to right,
+    rgba(241, 207, 14, 0.5),
+    rgba(7, 51, 145, 0.5)
+  );
+}
+.heading {
+  text-align: center;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(7, 64, 102);
+}
+
+@import "styles/styles";
+
+@media (max-width: 800px) {
+  body {
+    font-size: 12px;
+  }
+}
