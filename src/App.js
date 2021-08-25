@@ -43,8 +43,8 @@ function App() {
                 <Navbar />
                 <Welcome />
                 <Skills />
-                <Project />
                 <Hire />
+                <Project />
                 <Contact />
                 <Footer />
             </div>

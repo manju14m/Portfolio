@@ -99,8 +99,12 @@ export default function Contact() {
     return (
         <div id="contact">
             <div className="heading" >
-                <h2 className="" data-aos={"fade-left"} data-aos-duration="300">Reach Out To Me</h2>
-                <span className="span" data-aos={"fade-right"} data-aos-duration="300"></span>
+                <h2 data-aos={"fade-right"} data-aos-duration="300">CONTACT</h2>
+                <span className="span" data-aos={"fade-left"} data-aos-duration="300"></span>
+            </div>
+            <div className="request" data-aos={"fade-up"} data-aos-duration="300">
+                <p>Would you like to work with me? Sounds Good!</p>
+                <p>Please leave your details below or Whatsapp Me</p>
             </div>
 
             <div className="social-media">
@@ -116,9 +120,6 @@ export default function Contact() {
             </div>
             <div className="contact-form"
                 data-aos={"fade-up"}  data-aos-duration="500">
-                <p>
-                    Please leave your details here.
-                </p>
                 <form className="form">
                     <input type="text"
                         placeholder="Name *"

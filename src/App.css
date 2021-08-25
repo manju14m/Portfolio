@@ -39,6 +39,7 @@ body {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .span {
@@ -121,8 +122,8 @@ a {
   height: 100vh;
   width: 100%;
   position: relative;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(41, 41, 38, 0.9)), to(rgba(110, 56, 56, 0.9))), url("assets/media/skill.jpg");
-  background-image: linear-gradient(rgba(41, 41, 38, 0.9), rgba(110, 56, 56, 0.9)), url("assets/media/skill.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(41, 41, 38, 0.9)), to(rgba(110, 56, 56, 0.9)));
+  background-image: linear-gradient(rgba(41, 41, 38, 0.9), rgba(110, 56, 56, 0.9));
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -130,11 +131,24 @@ a {
 
 .profile {
   z-index: 20;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: gray;
 }
 
 .profile img {
-  width: 350px;
-  height: 350px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
 }
 
@@ -151,7 +165,7 @@ a {
   display: flex;
   z-index: 5;
   width: 50%;
-  font-size: 1.5em;
+  font-size: 1rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -190,37 +204,9 @@ a {
   color: #d04836;
 }
 
-.seemore {
-  position: absolute;
-  cursor: pointer;
-  bottom: 100px;
-  left: 45%;
-  -webkit-animation: move 1.5s infinite linear;
-          animation: move 1.5s infinite linear;
-}
-
-@-webkit-keyframes move {
-  0%,
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  50% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
-  }
-}
-
-@keyframes move {
-  0%,
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  50% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
-  }
+.suspense {
+  color: white;
+  font-size: 50px;
 }
 
 #welcome h2 {
@@ -229,9 +215,9 @@ a {
 }
 
 @media (max-width: 800px) {
-  .profile img {
-    width: 250px;
-    height: 250px;
+  .profile {
+    width: 200px;
+    height: 200px;
   }
   #welcome {
     -webkit-box-orient: vertical;
@@ -250,7 +236,7 @@ a {
 
 #skills {
   width: 100%;
-  padding: 50px;
+  padding: 50px 10px;
 }
 
 #skills p {
@@ -262,8 +248,8 @@ a {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  -webkit-box-shadow: -1px 1px 10px 4px #e6dbe1;
-          box-shadow: -1px 1px 10px 4px #e6dbe1;
+  -webkit-box-shadow: 0px 0px 10px 8px #e6dbe1;
+          box-shadow: 0px 0px 10px 8px #e6dbe1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -360,7 +346,9 @@ a {
 #projects {
   width: 100%;
   background-color: #dfd9d9;
-  padding-top: 40px;
+  padding-top: 50px;
+  -webkit-clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 100%);
 }
 
 .contain {
@@ -376,7 +364,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   text-align: left;
-  padding: 0 30px 30px 30px;
+  padding: 0 10px 30px 10px;
   color: #0a470a;
 }
 
@@ -393,7 +381,7 @@ a {
 .card div p {
   font-size: 1rem;
   padding: 10px 0;
-  color: #8b8686;
+  color: #806c6c;
 }
 
 .card div p span {
@@ -418,6 +406,10 @@ a {
 }
 
 @media (max-width: 800px) {
+  #projects {
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
   .card {
     display: block;
   }
@@ -433,10 +425,9 @@ a {
 
 .hire {
   width: 100%;
-  height: 40vh;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  padding: 80px 0;
+  height: 20vh;
+  background-color: white;
+  padding: 10px 0;
   background-size: 100% 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -453,13 +444,13 @@ a {
 }
 
 .hire h2 {
-  color: white;
+  color: #0bc29a;
 }
 
 .hire a {
   text-decoration: none;
   color: #4df34d;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .hire a:hover {
@@ -484,14 +475,18 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-clip-path: polygon(50% 60px, 100% 0, 100% 100%, 0 100%, 0 0);
-          clip-path: polygon(50% 60px, 100% 0, 100% 100%, 0 100%, 0 0);
-  background-color: #314558;
+  background-color: #0c7d91;
 }
 
 #contact .heading {
   margin-top: 70px;
-  color: #a1c995;
+  color: white;
+}
+
+#contact .request {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .social-media {

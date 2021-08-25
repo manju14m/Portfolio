@@ -1,5 +1,5 @@
-import random from '../media/random.PNG'
-import todo from '../media/todo.PNG'
+import random from '../media/random.png'
+import todo from '../media/todo.png'
 
 const projectData = [
     {

@@ -1,6 +1,7 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import React, { useEffect } from 'react';
+import { Link } from 'react-scroll'
 
 export default function Hire() {
 
@@ -13,8 +14,16 @@ export default function Hire() {
     return (
         <div className="hire" >
             <h2 data-aos={"zoom-in"} data-aos-duration="300">I Am Available For Freelancer<span style={{ color: "chocolate" }}> !</span></h2>
-            <a href="#contact" data-aos={"fade-up"} data-aos-duration="300">Contact Me
-            </a>
+            <Link to="contact" data-aos={"fade-up"} data-aos-duration="300"
+                                activeClass="active"
+                                spy={true}
+                                smooth={true}
+                                exact='true'
+                                offset={-30}
+                                duration={300}>
+                                Contact Me
+                        </Link>
+            {/* </a> */}
         </div>
     )
 }

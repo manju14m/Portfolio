@@ -1,15 +1,21 @@
-import AOS from 'aos'
-import 'aos/dist/aos.css
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import React, { useEffect } from 'react';
-import { HiOutlineChevronDoubleDown } from 'react-icons/hi';
+// import { HiOutlineChevronDoubleDown } from 'react-icons/hi';
 import { SiGithub, SiGmail, SiLinkedin } from 'react-icons/si';
 import { Link } from 'react-scroll';
 import Typed from 'react-typed';
-import profile from "../../assets/media/profile.jpg";
+// import Profile from './Profile'
+// import profile from "../../assets/media/profile.jpg";
+import { Suspense, lazy } from 'react';
+import { VscLoading } from 'react-icons/vsc';
+
+
+
+const Profile = React.lazy(() => import('./Profile'));
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -70,34 +76,37 @@ export default function Welcome() {
     return (
         <>
             <div id="welcome">
-                <div className="profile" data-aos={"zoom-in"} data-aos-duration="300">
-                    <img src={profile} alt="profile"/>
+                <div className="profile">
+                     <Suspense fallback={<div ><VscLoading className="suspense" /></div>} >  
+                        <Profile data-aos={"zoom-in"} data-aos-duration="900"/>
+                     </Suspense> 
                 </div>
-                <div className="header" data-aos={"zoom-in"} data-aos-duration="300">
-                    <h2>Hi, I'm Manju</h2>
+                <div className="header">
+                    <h2 data-aos={"zoom-in"} data-aos-duration="1000">Hi, I'm Manju</h2>
                     <Typed className={classes.typed}
                         strings={['Web Developer', 'React Developer', 'MERN Stack Developer']}
                         typeSpeed={40}
                         backSpeed={60}
                         loop
+                        data-aos={"zoom-in"} data-aos-duration="900"
                     />
                     <div>
-                        <a href="https://www.linkedin.com/in/manjunatha-m-b1647a109" target="_blank" data-aos={"fade-up"} data-aos-duration="300">
+                        <a href="https://www.linkedin.com/in/manjunatha-m-b1647a109" target="_blank" data-aos={"fade-up"} data-aos-duration="500">
                             <SiLinkedin className="linkedin"/>
                         </a>
-                        <a  href="https://github.com/manju14m" target="_blank" data-aos={"fade-up"} data-aos-duration="500">
+                        <a  href="https://github.com/manju14m" target="_blank" data-aos={"fade-up"} data-aos-duration="700">
                             <SiGithub className="github"/>
                         </a>
-                        <a  href="mailto:manju14m@gmail.com" target="_blank" data-aos={"fade-up"} data-aos-duration="700">
+                        <a  href="mailto:manju14m@gmail.com" target="_blank" data-aos={"fade-up"} data-aos-duration="900">
                             <SiGmail className="mail"/>
                         </a>
                     </div>
 
-                    <div className="seemore" data-aos={"fade-down"} data-aos-duration="500">
+                    {/* <div className="seemore" data-aos={"fade-down"} data-aos-duration="900">
                     <Link to="skills">
                         <HiOutlineChevronDoubleDown/>
                     </Link>
-                </div>
+                </div> */}
                 </div>
                 
             </div>

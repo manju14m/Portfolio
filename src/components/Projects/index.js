@@ -20,9 +20,9 @@ export default function Project() {
         <div id="projects">
             <div className="heading">
                 <h2 
-                    data-aos={"fade-left"} data-aos-duration="300"
-                >Projects</h2>
-                <span className="span" data-aos={"fade-right"} data-aos-duration="300"></span><br/>
+                    data-aos={"fade-right"} data-aos-duration="300"
+                >PROJECTS</h2>
+                <span className="span" data-aos={"fade-left"} data-aos-duration="300"></span><br/>
             </div>
 
             <div className="contain">
