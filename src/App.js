@@ -40,12 +40,12 @@ function App() {
                             }
                         }
                     }} />
-                <Navbar />
+{/*<Navbar />*/}
                 <Welcome />
                 <Skills />
                 <Hire />
                 <Project />
-                        {/*<Contact />*/}
+                <Contact />
                 <Footer />
             </div>
         </SnackbarProvider>
