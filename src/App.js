@@ -45,7 +45,7 @@ function App() {
                 <Skills />
                 <Hire />
                 <Project />
-                <Contact />
+                //<Contact />
                 <Footer />
             </div>
         </SnackbarProvider>
