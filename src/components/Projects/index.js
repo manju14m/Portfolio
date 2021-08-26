@@ -3,6 +3,7 @@ import 'aos/dist/aos.css';
 import React, { useEffect } from 'react';
 import { FaGlobe } from 'react-icons/fa';
 import projectData from '../../assets/data/projectsInfo';
+import { SiGithub } from 'react-icons/si';
 
 
 
@@ -37,9 +38,12 @@ export default function Project() {
                                     <br />
                                     <span>{`Tech Stack: ${TechStack}`}</span>
                                 </p>
+                                <span> 
                                 <a href={url} target="_blank">
                                     <FaGlobe/>
                                 </a>
+                                <a href=""><SiGithub/></a>
+                                </span>                                
                             </div>
                         </section>
 

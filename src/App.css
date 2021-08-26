@@ -122,8 +122,8 @@ a {
   height: 100vh;
   width: 100%;
   position: relative;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(41, 41, 38, 0.9)), to(rgba(110, 56, 56, 0.9)));
-  background-image: linear-gradient(rgba(41, 41, 38, 0.9), rgba(110, 56, 56, 0.9));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(41, 41, 38, 0.9)), to(rgba(110, 56, 56, 0.9))), url("assets/media/skill.jpg");
+  background-image: linear-gradient(rgba(41, 41, 38, 0.9), rgba(110, 56, 56, 0.9)), url("assets/media/skill.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -224,9 +224,9 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   .header {
     margin-top: 20px;
@@ -236,7 +236,7 @@ a {
 
 #skills {
   width: 100%;
-  padding: 50px 10px;
+  padding: 50px 10px 10px 10px;
 }
 
 #skills p {
@@ -328,8 +328,18 @@ a {
           align-items: center;
 }
 
+@media (max-width: 800px) {
+  .skillsContainer :last-child {
+    padding: 0 10px;
+  }
+}
+
+.skillsContainer :last-child p {
+  text-align: center;
+}
+
 .lottie {
-  width: 700px;
+  width: 900px;
 }
 
 @media (max-width: 800px) {
@@ -337,16 +347,22 @@ a {
     height: 50px;
     width: 50px;
   }
+  .lottie {
+    width: 300px;
+  }
   .content {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
 #projects {
   width: 100%;
   background-color: #dfd9d9;
-  padding-top: 50px;
+  padding-top: 80px;
   -webkit-clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 100%);
           clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 100%);
 }
@@ -376,6 +392,16 @@ a {
 
 .card div {
   padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
 }
 
 .card div p {
@@ -391,6 +417,8 @@ a {
 .card div a {
   color: black;
   font-size: 1.5rem;
+  margin-left: 0;
+  margin-right: 20px;
 }
 
 .card div a:hover {

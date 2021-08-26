@@ -4,7 +4,6 @@ import Particles from 'react-particles-js'
 import { SnackbarProvider } from "notistack";
 
 import Welcome from './components/Welcome';
-import Navbar from './components/Navbar'
 import Hire from './components/HireMe'
 import Skills from './components/Skills'
 import Project from './components/Projects'
@@ -40,7 +39,6 @@ function App() {
                             }
                         }
                     }} />
-{/*<Navbar />*/}
                 <Welcome />
                 <Skills />
                 <Hire />

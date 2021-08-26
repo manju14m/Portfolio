@@ -7,11 +7,10 @@
   position: relative;
 
   background-image: linear-gradient(
-    // to right,
-    rgba(41, 41, 38, 0.9),
-    rgba(110, 56, 56, 0.9)
-  );
-  // url("assets/media/skill.jpg");
+      rgba(41, 41, 38, 0.9),
+      rgba(110, 56, 56, 0.9)
+    ),
+    url("assets/media/skill.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -75,26 +74,6 @@
   font-size: 50px;
 }
 
-// .seemore {
-//   position: absolute;
-//   cursor: pointer;
-//   bottom: 100px;
-//   left: 45%;
-//   animation: move 1.5s infinite linear;
-// }
-
-// @keyframes move {
-//   0%,
-//   100% {
-//     -webkit-transform: translateY(0);
-//     transform: translateY(0);
-//   }
-//   50% {
-//     -webkit-transform: translateY(15px);
-//     transform: translateY(15px);
-//   }
-// }
-
 #welcome h2 {
   color: rgb(226, 238, 180);
   margin-bottom: 0;
@@ -107,7 +86,7 @@
   }
   #welcome {
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
   }
   .header {
     margin-top: 20px;

@@ -89,7 +89,6 @@ export default function Skills() {
                 <h2 data-aos={"fade-right"} data-aos-duration="300">WHAT I DO</h2>
                 <span className="span" data-aos={"fade-left"} data-aos-duration="300"></span>
                 <p data-aos={"fade-up"} data-aos-duration="500">CRAZY FRONT-END DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK</p>
-                
             </div>
             <div className="content">
                 <div className="lottie"  data-aos={"fade-up"} data-aos-duration="500">

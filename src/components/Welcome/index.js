@@ -3,18 +3,12 @@ import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import React, { useEffect } from 'react';
-// import { HiOutlineChevronDoubleDown } from 'react-icons/hi';
 import { SiGithub, SiGmail, SiLinkedin } from 'react-icons/si';
-import { Link } from 'react-scroll';
 import Typed from 'react-typed';
-// import Profile from './Profile'
-// import profile from "../../assets/media/profile.jpg";
 import { Suspense, lazy } from 'react';
 import { VscLoading } from 'react-icons/vsc';
 
-
-
-const Profile = React.lazy(() => import('./Profile'));
+const Profile = lazy(() => import('./Profile'));
 
 
 
@@ -62,7 +56,6 @@ const useStyles = makeStyles((theme) => ({
 export default function Welcome() {
 
     const classes = useStyles();
-    const theme = useTheme()
 
     useEffect(() => {
         AOS.init({
@@ -101,12 +94,6 @@ export default function Welcome() {
                             <SiGmail className="mail"/>
                         </a>
                     </div>
-
-                    {/* <div className="seemore" data-aos={"fade-down"} data-aos-duration="900">
-                    <Link to="skills">
-                        <HiOutlineChevronDoubleDown/>
-                    </Link>
-                </div> */}
                 </div>
                 
             </div>

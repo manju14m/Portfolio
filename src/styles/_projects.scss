@@ -1,7 +1,7 @@
 #projects {
   width: 100%;
   background-color: rgb(223, 217, 217);
-  padding-top: 50px;
+  padding-top: 80px;
   clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 100%);
 }
 .contain {
@@ -22,6 +22,9 @@
   }
   div {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-evenly;
     p {
       font-size: 1rem;
       padding: 10px 0;
@@ -33,6 +36,8 @@
     a {
       color: black;
       font-size: 1.5rem;
+      margin-left: 0;
+      margin-right: 20px;
       &:hover {
         color: blue;
       }
