@@ -1,4 +1,4 @@
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import AOS from 'aos';
 import 'aos/dist/aos.css';

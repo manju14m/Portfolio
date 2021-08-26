@@ -95,7 +95,7 @@ export default function Skills() {
                     <GreetingLottie animationData={webdev} />
                 </div>
                 <div className="skillsContainer">
-                    <div  >
+                    <div>
                     {
                         skills.map((item,index)=>(
                             <div className="skill" key={index} data-aos={"fade-up"} data-aos-duration="500">

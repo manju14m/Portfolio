@@ -236,7 +236,7 @@ a {
 
 #skills {
   width: 100%;
-  padding: 50px 10px 10px 10px;
+  padding: 50px 10px;
 }
 
 #skills p {
@@ -344,18 +344,12 @@ a {
 
 @media (max-width: 800px) {
   .skill img {
-    height: 50px;
-    width: 50px;
-  }
-  .lottie {
-    width: 300px;
+    height: 65px;
+    width: 65px;
   }
   .content {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 

@@ -1,6 +1,6 @@
 #skills {
   width: 100%;
-  padding: 50px 10px 10px 10px;
+  padding: 50px 10px;
 
   p {
     color: rgb(53, 48, 48);
@@ -72,14 +72,10 @@
 
 @media (max-width: 800px) {
   .skill img {
-    height: 50px;
-    width: 50px;
-  }
-  .lottie {
-    width: 300px;
+    height: 65px;
+    width: 65px;
   }
   .content {
     flex-wrap: wrap;
-    justify-content: center;
   }
 }
