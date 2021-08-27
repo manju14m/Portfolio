@@ -39,10 +39,10 @@ export default function Project() {
                                     <span>{`Tech Stack: ${TechStack}`}</span>
                                 </p>
                                 <span> 
-                                <a href={url} target="_blank">
+                                <a href={url} rel="noreferrer" target="_blank">
                                     <FaGlobe/>
                                 </a>
-                                <a href=""><SiGithub/></a>
+                                <a href="https://github.com/manju14m" rel="noreferrer" target="_blank"><SiGithub/></a>
                                 </span>                                
                             </div>
                         </section>

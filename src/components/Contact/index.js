@@ -108,13 +108,13 @@ export default function Contact() {
             </div>
 
             <div className="social-media">
-                <a data-aos={"fade-up"} data-aos-duration="500" href="https://www.linkedin.com/in/manjunatha-m-b1647a109" target="_blank">
+                <a data-aos={"fade-up"} data-aos-duration="500" href="https://www.linkedin.com/in/manjunatha-m-b1647a109" rel="noreferrer"  target="_blank">
                     <SiLinkedin className="linkedin"/>
                 </a>
-                <a data-aos={"fade-up"} data-aos-duration="700" href="https://github.com/manju14m" target="_blank">
+                <a data-aos={"fade-up"} data-aos-duration="700" href="https://github.com/manju14m" rel="noreferrer" target="_blank">
                     <SiGithub className="github"/>
                 </a>
-                <a data-aos={"fade-up"} data-aos-duration="900" href="mailto:manju14m@gmail.com" target="_blank">
+                <a data-aos={"fade-up"} data-aos-duration="900" href="mailto:manju14m@gmail.com" rel="noreferrer" target="_blank">
                     <SiGmail className="mail"/>
                 </a>
             </div>
@@ -127,14 +127,15 @@ export default function Contact() {
                         onChange={handleChange}
                         value={userData.name}
                         className="text1"
-                        autoComplete={false} />
+                         />
                     <p className={classes.error}> {error.name ? error.name : <br />} </p>
 
                     <input type="email"
                         placeholder="Email *"
                         name="mail"
                         onChange={handleChange}
-                        value={userData.mail} />
+                        value={userData.mail}
+                         />
                     <p className={classes.error}> {error.mail ? error.mail : <br />} </p>
 
                     <input type="number"
@@ -142,7 +143,8 @@ export default function Contact() {
                         onChange={handleChange}
                         value={userData.phone_number}
                         name="phone_number"
-                        max="10" />
+                        max="10"
+                         />
                     <p className={classes.error}> {error.phone_number ? error.phone_number : <br />} </p>
 
                     <textarea style={{ height: "80px" }}

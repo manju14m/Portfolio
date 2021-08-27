@@ -65,7 +65,6 @@ export default function Welcome() {
 
 
     const chatUrl = `https://wa.me/${process.env.REACT_APP_PHONE_NUMBER}?text=${process.env.REACT_APP_MESSAGE}`
-    console.log(process.env.REACT_APP_PHONE_NUMBER)
     return (
         <>
             <div id="welcome">
@@ -84,13 +83,13 @@ export default function Welcome() {
                         data-aos={"zoom-in"} data-aos-duration="900"
                     />
                     <div>
-                        <a href="https://www.linkedin.com/in/manjunatha-m-b1647a109" target="_blank" data-aos={"fade-up"} data-aos-duration="500">
+                        <a href="https://www.linkedin.com/in/manjunatha-m-b1647a109" rel="noreferrer" target="_blank" data-aos={"fade-up"} data-aos-duration="500">
                             <SiLinkedin className="linkedin"/>
                         </a>
-                        <a  href="https://github.com/manju14m" target="_blank" data-aos={"fade-up"} data-aos-duration="700">
+                        <a  href="https://github.com/manju14m" rel="noreferrer" target="_blank" data-aos={"fade-up"} data-aos-duration="700">
                             <SiGithub className="github"/>
                         </a>
-                        <a  href="mailto:manju14m@gmail.com" target="_blank" data-aos={"fade-up"} data-aos-duration="900">
+                        <a  href="mailto:manju14m@gmail.com" rel="noreferrer" target="_blank" data-aos={"fade-up"} data-aos-duration="900">
                             <SiGmail className="mail"/>
                         </a>
                     </div>
