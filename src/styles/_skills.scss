@@ -58,16 +58,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (max-width: 800px) {
+      padding: 0 10px;
+    }
+    p {
+      text-align: center;
+    }
   }
 }
 .lottie {
-  width: 700px;
+  width: 900px;
 }
 
 @media (max-width: 800px) {
   .skill img {
-    height: 50px;
-    width: 50px;
+    height: 65px;
+    width: 65px;
   }
   .content {
     flex-wrap: wrap;

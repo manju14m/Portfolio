@@ -1,25 +1,36 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Manju-Portfolio",
+  "name": "Manju-Portfolio",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "icons-512.jpg",
+      "sizes": "16x16  ",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "profile.jpg",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "profile.jpg",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+
+    {
+      "src": "profile.jpg",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "icons-512.jpg",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#02aab0",
   "background_color": "#ffffff"
 }
