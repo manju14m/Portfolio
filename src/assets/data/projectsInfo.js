@@ -26,10 +26,10 @@ const projectData = [
     image: random,
   },
   {
-    name: "ToDo App",
-    info: "This is a ReactJS based ToDo application",
-    TechStack: "ReactJS, JavaScript, SCSS.",
-    url: "https://manju-react-todolist.netlify.app",
+    name: "MERN STACK Task Manager",
+    info: "MERN_STACK based Task Manager application",
+    TechStack: "ReactJS, Redux, ExpressJS, MongoDB, JavaScript, SCSS.",
+    url: "https://taskmanager-gold.vercel.app/",
     image: todo,
   },
 ];
