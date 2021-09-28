@@ -16,9 +16,13 @@
   color: rgb(10, 71, 10);
 
   img {
-    height: 200px;
-    width: 300px;
+    height: 400px;
+    width: 50%;
     border-radius: 20px;
+    transition: box-shadow 0.5s;
+    &:hover {
+      box-shadow: 0px 0px 16px 2px rgb(116, 101, 109);
+    }
   }
   div {
     padding: 20px;
@@ -37,9 +41,12 @@
       color: black;
       font-size: 1.5rem;
       margin-left: 0;
-      margin-right: 20px;
+      // padding: 10px;
       &:hover {
         color: blue;
+      }
+      &:first-child {
+        margin-right: 20px;
       }
     }
   }
@@ -57,8 +64,8 @@
   .card {
     display: block;
     img {
-      height: 100px;
-      width: 200px;
+      height: 200px;
+      width: 300px;
     }
     div {
       padding: 0;

@@ -379,9 +379,18 @@ a {
 }
 
 .card img {
-  height: 200px;
-  width: 300px;
+  height: 400px;
+  width: 50%;
   border-radius: 20px;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+}
+
+.card img:hover {
+  -webkit-box-shadow: 0px 0px 16px 2px #74656d;
+          box-shadow: 0px 0px 16px 2px #74656d;
 }
 
 .card div {
@@ -412,11 +421,14 @@ a {
   color: black;
   font-size: 1.5rem;
   margin-left: 0;
-  margin-right: 20px;
 }
 
 .card div a:hover {
   color: blue;
+}
+
+.card div a:first-child {
+  margin-right: 20px;
 }
 
 .card:nth-child(even) {
@@ -436,8 +448,8 @@ a {
     display: block;
   }
   .card img {
-    height: 100px;
-    width: 200px;
+    height: 200px;
+    width: 300px;
   }
   .card div {
     padding: 0;
