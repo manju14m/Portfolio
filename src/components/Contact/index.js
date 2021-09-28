@@ -6,6 +6,7 @@ import { useSnackbar } from "notistack";
 import { useEffect, useState } from "react";
 import validation from "./functions/validation";
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 const useStyles = makeStyles(() => ({
   loading: {
