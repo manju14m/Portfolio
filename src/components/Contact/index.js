@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import validation from "./functions/validation";
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import resume from "../../assets/data/ManjuResume.pdf"
 
 const useStyles = makeStyles(() => ({
   loading: {
@@ -114,9 +115,14 @@ export default function Contact() {
           data-aos-duration="300"
         ></span>
       </div>
+        <a href={resume} download="Manju_Resume">
+          <button className="resume">
+            My Resume
+          </button>
+        </a>
       <div className="request" data-aos={"fade-up"} data-aos-duration="300">
         <p>Would you like to work with me? Sounds Good!</p>
-        <p>Please leave your details below or Whatsapp Me</p>
+        <p>Please leave your details below or WhatsApp Me</p>
       </div>
 
       <div className="social-media">

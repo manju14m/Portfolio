@@ -523,6 +523,20 @@ a {
   margin-bottom: 20px;
 }
 
+#contact .resume {
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#contact .resume:hover {
+  background-color: #5e5353;
+  color: white;
+}
+
 .social-media {
   margin-bottom: 10px;
   width: 300px;
@@ -545,6 +559,8 @@ a {
 
 .social-media .linkedin:hover {
   color: #0a66c2;
+  background-color: white;
+  border-radius: 3px;
 }
 
 .social-media .github:hover {

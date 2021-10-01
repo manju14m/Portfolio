@@ -29,7 +29,6 @@ export default function Hire() {
       >
         Contact Me
       </Link>
-      {/* </a> */}
     </div>
   );
 }

@@ -16,6 +16,18 @@
     text-align: center;
     margin-bottom: 20px;
   }
+  .resume {
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(94, 83, 83);
+      color: white;
+    }
+  }
 }
 .social-media {
   margin-bottom: 10px;
@@ -32,6 +44,8 @@
   }
   .linkedin:hover {
     color: #0a66c2;
+    background-color: white;
+    border-radius: 3px;
   }
   .github:hover {
     color: black;

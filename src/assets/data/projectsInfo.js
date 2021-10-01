@@ -20,7 +20,7 @@ const projectData = [
   // },
   {
     name: "Task Manager",
-    info: "MERN Stack based Task MAnager application",
+    info: "MERN Stack based Task Manager application",
     TechStack: "ReactJS, NodeJS, ExpressJS, MongoDB, JavaScript, SCSS.",
     url: "https://taskmanager-gold.vercel.app",
     image: taskManager,
