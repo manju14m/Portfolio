@@ -533,8 +533,11 @@ a {
 }
 
 #contact .resume:hover {
-  background-color: #5e5353;
-  color: white;
+  background-color: #b9aaaa;
+}
+
+#contact .resume a {
+  color: black;
 }
 
 .social-media {
@@ -559,8 +562,6 @@ a {
 
 .social-media .linkedin:hover {
   color: #0a66c2;
-  background-color: white;
-  border-radius: 3px;
 }
 
 .social-media .github:hover {

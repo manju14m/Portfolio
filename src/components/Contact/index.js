@@ -94,6 +94,7 @@ export default function Contact() {
   useEffect(() => {
     AOS.init({
       duration: 800,
+      easing: "ease",
     });
   }, []);
 
@@ -115,11 +116,12 @@ export default function Contact() {
           data-aos-duration="300"
         ></span>
       </div>
-        <a href={resume} download="Manju_Resume">
-          <button className="resume">
+        
+          <button className="resume" data-aos={"fade-up"} data-aos-duration="300">
+            <a href={resume} download="Manju_Resume">
             My Resume
+            </a>
           </button>
-        </a>
       <div className="request" data-aos={"fade-up"} data-aos-duration="300">
         <p>Would you like to work with me? Sounds Good!</p>
         <p>Please leave your details below or WhatsApp Me</p>

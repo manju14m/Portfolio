@@ -24,8 +24,10 @@
     margin-bottom: 10px;
     cursor: pointer;
     &:hover {
-      background-color: rgb(94, 83, 83);
-      color: white;
+      background-color: rgb(185, 170, 170);
+    }
+    a {
+      color: black;
     }
   }
 }
@@ -44,8 +46,6 @@
   }
   .linkedin:hover {
     color: #0a66c2;
-    background-color: white;
-    border-radius: 3px;
   }
   .github:hover {
     color: black;
