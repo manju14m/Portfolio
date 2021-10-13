@@ -1,9 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import emailjs from "emailjs-com";
 import { useSnackbar } from "notistack";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import validation from "./functions/validation";
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 import CircularProgress from "@material-ui/core/CircularProgress";
@@ -26,6 +24,7 @@ const useStyles = makeStyles(() => ({
 export default function Contact() {
   const classes = useStyles();
   const [loading, setLoading] = useState(false);
+
   const [userData, setUserData] = useState({
     name: "",
     mail: "",
@@ -91,13 +90,6 @@ export default function Contact() {
     });
   };
 
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      easing: "ease",
-    });
-  }, []);
-
   const disable =
     userData.name.length === 0 ||
     userData.mail.length === 0 ||
@@ -107,22 +99,21 @@ export default function Contact() {
   return (
     <div id="contact">
       <div className="heading">
-        <h2 data-aos={"fade-right"} data-aos-duration="300">
+        <h2 data-aos={"fade-right"}>
           CONTACT
         </h2>
         <span
           className="span"
           data-aos={"fade-left"}
-          data-aos-duration="300"
         ></span>
       </div>
         
-          <button className="resume" data-aos={"fade-up"} data-aos-duration="300">
+          <button className="resume" data-aos={"fade-up"}>
             <a href={resume} download="Manju_Resume">
             My Resume
             </a>
           </button>
-      <div className="request" data-aos={"fade-up"} data-aos-duration="300">
+      <div className="request" data-aos={"fade-up"}>
         <p>Would you like to work with me? Sounds Good!</p>
         <p>Please leave your details below or WhatsApp Me</p>
       </div>
@@ -130,7 +121,7 @@ export default function Contact() {
       <div className="social-media">
         <a
           data-aos={"fade-up"}
-          data-aos-duration="500"
+          data-aos-duration="1300"
           href="https://www.linkedin.com/in/manjunatha-m-b1647a109"
           rel="noreferrer"
           target="_blank"
@@ -139,7 +130,7 @@ export default function Contact() {
         </a>
         <a
           data-aos={"fade-up"}
-          data-aos-duration="700"
+          data-aos-duration="1600"
           href="https://github.com/manju14m"
           rel="noreferrer"
           target="_blank"
@@ -148,7 +139,7 @@ export default function Contact() {
         </a>
         <a
           data-aos={"fade-up"}
-          data-aos-duration="900"
+          data-aos-duration="1900"
           href="mailto:manju14m@gmail.com"
           rel="noreferrer"
           target="_blank"
@@ -159,7 +150,6 @@ export default function Contact() {
       <div
         className="contact-form"
         data-aos={"fade-up"}
-        data-aos-duration="500"
       >
         <form className="form">
           <input
@@ -182,7 +172,7 @@ export default function Contact() {
           <p className={classes.error}> {error.mail ? error.mail : <br />} </p>
 
           <input
-            type="number"
+            type="tel"
             placeholder="Phone Number *"
             onChange={handleChange}
             value={userData.phone_number}

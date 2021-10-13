@@ -8,8 +8,19 @@ import Skills from "components/Skills";
 import Project from "components/Projects";
 import Contact from "components/Contact";
 import Footer from "components/Footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import {useEffect} from "react"
 
 function App() {
+
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      duration:1500,
+    });
+  }, []);
+
   return (
     <SnackbarProvider
       autoHideDuration={3000}

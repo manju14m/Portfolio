@@ -18,7 +18,6 @@
   align-items: center;
   margin: 10px;
 
-  position: relative;
   img {
     height: 50px;
     width: 50px;
@@ -28,10 +27,20 @@
     color: white !important;
     position: absolute;
     text-align: center;
-    padding: 0.3rem 0.5rem;
+    padding: 0.3rem 0.5rem 0.5rem 0.5rem;
     border-radius: 5px;
     opacity: 0;
     top: -10px;
+  }
+  p::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: green;
+    position: absolute;
+    bottom: -35%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
   }
   &:hover p {
     opacity: 1;

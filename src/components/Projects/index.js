@@ -1,27 +1,19 @@
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
 import projectData from "assets/data/projectsInfo";
 import { FaGlobe } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
 
 export default function Project() {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-    });
-  }, []);
+
 
   return (
     <div id="projects">
       <div className="heading">
-        <h2 data-aos={"fade-right"} data-aos-duration="300">
+        <h2 data-aos={"fade-right"}>
           PROJECTS
         </h2>
         <span
           className="span"
           data-aos={"fade-left"}
-          data-aos-duration="300"
         ></span>
         <br />
       </div>
@@ -31,7 +23,6 @@ export default function Project() {
           <section
             className="card"
             data-aos={"fade-right"}
-            data-aos-duration="300"
             key={key}
           >
             <img src={image} alt={name} />

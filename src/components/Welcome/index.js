@@ -1,8 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 import Typed from "react-typed";
 import { Suspense, lazy } from "react";
@@ -53,17 +50,12 @@ const useStyles = makeStyles((theme) => ({
 export default function Welcome() {
   const classes = useStyles();
 
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-    });
-  }, []);
 
   const chatUrl = `https://wa.me/${process.env.REACT_APP_PHONE_NUMBER}?text=${process.env.REACT_APP_MESSAGE}`;
   return (
     <>
       <div id="welcome">
-        <div className="profile">
+        <div className="profile" data-aos={"zoom-in"}>
           <Suspense
             fallback={
               <div>
@@ -71,11 +63,11 @@ export default function Welcome() {
               </div>
             }
           >
-            <Profile data-aos={"zoom-in"} data-aos-duration="900" />
+            <Profile  />
           </Suspense>
         </div>
         <div className="header">
-          <h2 data-aos={"zoom-in"} data-aos-duration="1000">
+          <h2 data-aos={"zoom-in"}>
             Hi, I'm Manju
           </h2>
           <Typed
@@ -88,16 +80,14 @@ export default function Welcome() {
             typeSpeed={40}
             backSpeed={60}
             loop
-            data-aos={"zoom-in"}
-            data-aos-duration="900"
+            data-aos={"fade-up"}
           />
           <div>
             <a
               href="https://www.linkedin.com/in/manjunatha-m-b1647a109"
               rel="noreferrer"
               target="_blank"
-              data-aos={"fade-up"}
-              data-aos-duration="500"
+              data-aos={"fade-up"} data-aos-duration="1300"
             >
               <SiLinkedin className="linkedin" />
             </a>
@@ -106,7 +96,7 @@ export default function Welcome() {
               rel="noreferrer"
               target="_blank"
               data-aos={"fade-up"}
-              data-aos-duration="700"
+              data-aos-duration="1600"
             >
               <SiGithub className="github" />
             </a>
@@ -115,7 +105,7 @@ export default function Welcome() {
               rel="noreferrer"
               target="_blank"
               data-aos={"fade-up"}
-              data-aos-duration="900"
+              data-aos-duration="1900"
             >
               <SiGmail className="mail" />
             </a>
@@ -123,7 +113,7 @@ export default function Welcome() {
         </div>
       </div>
 
-      <div className={classes.chatContainer}>
+      <div className={classes.chatContainer} >
         <a title="Whatsapp me" href={chatUrl}>
           <WhatsAppIcon className={classes.chat} />
         </a>
